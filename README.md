@@ -8,4 +8,4 @@ Simply, run
 >run backup.sh
 
 
-#### For more info, read the geenral dislaimer in my repository: "General Disclaimer"
+#### For more info, read the geenral dislaimer in my repository: ["General Disclaimer"](https://github.com/Carlopasquinucci/General_disclaimer)
