@@ -1,5 +1,19 @@
-mkdir -p backupdir    # it will create the folder backupdir if doesn't exist
+#Teo different methods. Move the # to select the most suitable method for you.
 
-cp -r --backup=t constant backupdir/ # the --backup=t will rename the old file existing in the folder with (1), (2), etc.. etc..
-rm -r backupdir/constant/polyMesh
-cp -r --backup=t system backupdir/ # the --backup=t will rename the old file existing in the folder with (1), (2), etc.. etc..
+# 1) One folder pro each backup
+
+now=$(date +%F%R)
+mkdir $now
+
+cp -r --backup=t constant $now/
+rm -r $now/constant/polyMesh
+cp -r --backup=t system $now/
+
+# 2) One folder pro all the timestep
+
+
+#mkdir -p backupdir
+
+#cp -r --backup=t constant backupdir/
+#rm -r backupdir/constant/polyMesh
+#cp -r --backup=t system backupdir/
